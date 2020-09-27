@@ -5,7 +5,14 @@ Repository for TLU LIFE project "Games of Research"
 ## Requirements
 
 Unity version 2019.4.11f1 LTS
+
 VSCode or Visual Studio 2019
+
+## Plugins
+
+Useful plugins:
+
+https://unity.github.com/
 
 ### Using VSCode
 
