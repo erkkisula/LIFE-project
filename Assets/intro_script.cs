@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class intro_script : MonoBehaviour
@@ -15,7 +16,7 @@ public class intro_script : MonoBehaviour
             step++;
             DialogText.text = textStrings[step - 1];
         } else {
-            DialogText.text = "NEXT_SCENE";
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
     }
