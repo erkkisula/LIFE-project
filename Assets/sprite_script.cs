@@ -43,21 +43,25 @@ public class sprite_script : MonoBehaviour
     if (MoveCheck == 4)
     {
       moveToPos(aPosition1);
+      faceTarget(aPosition1);
       checkIfAtPos(aPosition1, 1);
     }
     else if (MoveCheck == 1)
     {
       moveToPos(aPosition2);
+      faceTarget(aPosition2);
       checkIfAtPos(aPosition2, 2);
     }
     else if (MoveCheck == 2)
     {
       moveToPos(aPosition3);
+      faceTarget(aPosition3);
       checkIfAtPos(aPosition3, 3);
     }
     else if (MoveCheck == 3)
     {
       moveToPos(aPosition4);
+      faceTarget(aPosition4);
       checkIfAtPos(aPosition4, 4);
     }
   }
@@ -87,5 +91,12 @@ public class sprite_script : MonoBehaviour
         isWalking = true;
       }
     }
+  }
+
+  void faceTarget(Vector2 targetDir)
+  {
+    Vector2 dir = new Vector2(targetDir.x - transform.position.x, targetDir.y - transform.position.y);
+    var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90;
+    transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
   }
 }
