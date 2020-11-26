@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 931529617}
   - component: {fileID: 931529616}
   m_Layer: 5
-  m_Name: Next_button
+  m_Name: Start_Test_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -276,7 +276,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1585223339}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1538253615}
+        m_MethodName: startTest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &931529617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,7 +603,7 @@ GameObject:
   - component: {fileID: 1538253613}
   - component: {fileID: 1538253615}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Worker_Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -614,7 +625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -385, y: -180}
+  m_AnchoredPosition: {x: 734, y: -61}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1538253613
@@ -671,6 +682,7 @@ MonoBehaviour:
   aPosition3: {x: 385, y: 100}
   aPosition4: {x: 385, y: -100}
   MoveCheck: 1
+  isTestRunning: 0
 --- !u!1 &1585223337
 GameObject:
   m_ObjectHideFlags: 0
