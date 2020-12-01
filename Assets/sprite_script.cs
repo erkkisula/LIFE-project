@@ -15,9 +15,12 @@ public class sprite_script : MonoBehaviour
 
   DateTime workStartTime = new DateTime(1970, 1, 1);
 
+  GameObject myTestObject;
+
   void Start()
   {
-
+    myTestObject = GameObject.Find("Item_1");
+    myTestObject.GetComponent<item_script>().setPosition(new Vector2(60, 60));
   }
 
   void Update()
