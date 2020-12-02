@@ -5,10 +5,40 @@ using TMPro;
 
 public class dropdown_script : MonoBehaviour
 {
+    public int previousValue = 0;
     public int selectedValue = 0;
 
-    public void handleInput(int val) {
-        selectedValue = val;
-        print(val);
+    public bool isUiEvent = true;
+
+    public TMP_Dropdown thisDropdown;
+
+    private GameObject controller;
+
+    void Start()
+    {
+        controller = GameObject.Find("Menu_Panel");
+    }
+
+    public void handleInput(int val)
+    {
+        if (isUiEvent)
+        {
+            controller.GetComponent<int_menu_script>().swapObjects(val, selectedValue);
+            previousValue = selectedValue;
+            selectedValue = val;
+        }
+        else
+        {
+            isUiEvent = true;
+        }
+
+    }
+
+    public void setDropdownValue(int newVal)
+    {
+        isUiEvent = false;
+        previousValue = selectedValue;
+        selectedValue = newVal;
+        thisDropdown.value = selectedValue;
     }
 }

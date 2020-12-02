@@ -10,14 +10,14 @@ public class item_script : MonoBehaviour
 
     void Start()
     {
-        setPosition(position);
     }
 
     void Update()
     {
     }
 
-    public void setPosition(Vector2 newPos) {
+    public void setPosition(Vector2 newPos)
+    {
         position = newPos;
         transform.position = position;
     }
