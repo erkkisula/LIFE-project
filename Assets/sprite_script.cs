@@ -5,20 +5,22 @@ using System;
 
 public class sprite_script : MonoBehaviour
 {
+    private GameObject controller;
     public Vector2 aPosition1 = new Vector2(-385, -200);
     public Vector2 aPosition2 = new Vector2(-385, 100);
     public Vector2 aPosition3 = new Vector2(385, 100);
     public Vector2 aPosition4 = new Vector2(385, -200);
     public int MoveCheck = 1;
     public Boolean isTestRunning = false;
-    public Boolean isWalking = true;
+    public Boolean isWalking = false;
 
-    int[] visitingOrder = new int[] { 0, 1, 2, 3 };
 
     DateTime workStartTime = new DateTime(1970, 1, 1);
 
     void Start()
     {
+        controller = GameObject.Find("Game_UI_elements");
+        print(controller);
     }
 
     void Update()
@@ -29,6 +31,7 @@ public class sprite_script : MonoBehaviour
     public void startTest()
     {
         isTestRunning = true;
+        isWalking = true;
     }
 
     public void runTest()
@@ -43,27 +46,31 @@ public class sprite_script : MonoBehaviour
     {
         if (MoveCheck == 4)
         {
-            moveToPos(aPosition1);
-            faceTarget(aPosition1);
-            checkIfAtPos(aPosition1, 1);
+            Vector2 posToMove = controller.GetComponent<game_ui>().gameObjects[3].GetComponent<item_script>().position;
+            moveToPos(posToMove);
+            faceTarget(posToMove);
+            checkIfAtPos(posToMove, 1);
         }
         else if (MoveCheck == 1)
         {
-            moveToPos(aPosition2);
-            faceTarget(aPosition2);
-            checkIfAtPos(aPosition2, 2);
+            Vector2 posToMove = controller.GetComponent<game_ui>().gameObjects[0].GetComponent<item_script>().position;
+            moveToPos(posToMove);
+            faceTarget(posToMove);
+            checkIfAtPos(posToMove, 2);
         }
         else if (MoveCheck == 2)
         {
-            moveToPos(aPosition3);
-            faceTarget(aPosition3);
-            checkIfAtPos(aPosition3, 3);
+            Vector2 posToMove = controller.GetComponent<game_ui>().gameObjects[1].GetComponent<item_script>().position;
+            moveToPos(posToMove);
+            faceTarget(posToMove);
+            checkIfAtPos(posToMove, 3);
         }
         else if (MoveCheck == 3)
         {
-            moveToPos(aPosition4);
-            faceTarget(aPosition4);
-            checkIfAtPos(aPosition4, 4);
+            Vector2 posToMove = controller.GetComponent<game_ui>().gameObjects[2].GetComponent<item_script>().position;
+            moveToPos(posToMove);
+            faceTarget(posToMove);
+            checkIfAtPos(posToMove, 4);
         }
     }
 

@@ -14,16 +14,19 @@ public class dropdown_script : MonoBehaviour
 
     private GameObject controller;
 
+    private GameObject objectController;
+
     void Start()
     {
         controller = GameObject.Find("Menu_Panel");
+        objectController = GameObject.Find("Game_UI_elements");
     }
 
     public void handleInput(int val)
     {
         if (isUiEvent)
         {
-            controller.GetComponent<int_menu_script>().swapObjects(val, selectedValue);
+            controller.GetComponent<int_menu_script>().swapObjects(val, selectedValue, objectController.GetComponent<game_ui>().gameObjects);
             previousValue = selectedValue;
             selectedValue = val;
         }
