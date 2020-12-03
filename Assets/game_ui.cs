@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class game_ui : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public List<GameObject> gameObjects = new List<GameObject>();
+
+    private void populateGameObjects(List<GameObject> gameObjects)
     {
-        
+        GameObject newObject;
+        newObject = GameObject.Find("Item_1");
+        gameObjects.Add(newObject);
+        newObject = GameObject.Find("Item_2");
+        gameObjects.Add(newObject);
+        newObject = GameObject.Find("Item_3");
+        gameObjects.Add(newObject);
+        newObject = GameObject.Find("Item_4");
+        gameObjects.Add(newObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        populateGameObjects(gameObjects);
     }
 }
