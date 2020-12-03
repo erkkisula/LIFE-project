@@ -6,10 +6,6 @@ using System;
 public class sprite_script : MonoBehaviour
 {
     private GameObject controller;
-    public Vector2 aPosition1 = new Vector2(-385, -200);
-    public Vector2 aPosition2 = new Vector2(-385, 100);
-    public Vector2 aPosition3 = new Vector2(385, 100);
-    public Vector2 aPosition4 = new Vector2(385, -200);
     public int MoveCheck = 1;
     public Boolean isTestRunning = false;
     public Boolean isWalking = false;
