@@ -576,6 +576,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousValue: 3
   selectedValue: 3
+  isUiEvent: 1
   thisDropdown: {fileID: 104903724}
 --- !u!114 &104903724
 MonoBehaviour:
@@ -742,6 +743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousValue: 2
   selectedValue: 2
+  isUiEvent: 1
   thisDropdown: {fileID: 131279841}
 --- !u!114 &131279841
 MonoBehaviour:
@@ -1266,6 +1268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousValue: 0
   selectedValue: 0
+  isUiEvent: 1
   thisDropdown: {fileID: 232912277}
 --- !u!1 &267290739
 GameObject:
@@ -1754,7 +1757,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11fd2f953b811e8429af421e57dc47f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjects: []
   dropdowns: []
 --- !u!1 &329993604
 GameObject:
@@ -5449,10 +5451,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfeebc08f6b460b4a87ac4b6d04b4f68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aPosition1: {x: -385, y: -200}
-  aPosition2: {x: -385, y: 100}
-  aPosition3: {x: 385, y: 100}
-  aPosition4: {x: 385, y: -200}
   MoveCheck: 1
   isTestRunning: 0
   isWalking: 1
@@ -6377,6 +6375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 602eef8eee344854a8a7b24431ca155d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObjects: []
 --- !u!1 &1876292521
 GameObject:
   m_ObjectHideFlags: 0
@@ -7411,6 +7410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousValue: 1
   selectedValue: 1
+  isUiEvent: 1
   thisDropdown: {fileID: 2146229980}
 --- !u!114 &2146229980
 MonoBehaviour:
