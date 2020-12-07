@@ -310,7 +310,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ITEM 1
+  m_text: TOP LEFT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -443,7 +443,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ITEM 2
+  m_text: TOP RIGHT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -574,8 +574,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b9a6c3e4c9d634abcc45301995459d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previousValue: 3
-  selectedValue: 3
+  previousValue: 0
+  selectedValue: 0
   isUiEvent: 1
   thisDropdown: {fileID: 104903724}
 --- !u!114 &104903724
@@ -624,16 +624,16 @@ MonoBehaviour:
   m_Placeholder: {fileID: 0}
   m_ItemText: {fileID: 329993606}
   m_ItemImage: {fileID: 0}
-  m_Value: 3
+  m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Item 1
+    - m_Text: Desk
       m_Image: {fileID: 0}
-    - m_Text: Item 2
+    - m_Text: Box
       m_Image: {fileID: 0}
-    - m_Text: Item 3
+    - m_Text: Sticker printer
       m_Image: {fileID: 0}
-    - m_Text: Item 4
+    - m_Text: Desk with computer
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -794,13 +794,13 @@ MonoBehaviour:
   m_Value: 2
   m_Options:
     m_Options:
-    - m_Text: Item 1
+    - m_Text: Desk
       m_Image: {fileID: 0}
-    - m_Text: Item 2
+    - m_Text: Box
       m_Image: {fileID: 0}
-    - m_Text: Item 3
+    - m_Text: Sticker printer
       m_Image: {fileID: 0}
-    - m_Text: Item 4
+    - m_Text: Desk with computer
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1191,16 +1191,16 @@ MonoBehaviour:
   m_Placeholder: {fileID: 0}
   m_ItemText: {fileID: 283979731}
   m_ItemImage: {fileID: 0}
-  m_Value: 0
+  m_Value: 1
   m_Options:
     m_Options:
-    - m_Text: Item 1
+    - m_Text: Desk
       m_Image: {fileID: 0}
-    - m_Text: Item 2
+    - m_Text: Box
       m_Image: {fileID: 0}
-    - m_Text: Item 3
+    - m_Text: Sticker printer
       m_Image: {fileID: 0}
-    - m_Text: Item 4
+    - m_Text: Desk with computer
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1266,8 +1266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b9a6c3e4c9d634abcc45301995459d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previousValue: 0
-  selectedValue: 0
+  previousValue: 1
+  selectedValue: 1
   isUiEvent: 1
   thisDropdown: {fileID: 232912277}
 --- !u!1 &267290739
@@ -3098,7 +3098,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ITEM 3
+  m_text: BOTTOM LEFT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -4171,13 +4171,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156842124}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 7.5, y: 7.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1436832992}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -420, y: -335}
@@ -4854,7 +4854,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ITEM 4
+  m_text: BOTTOM RIGHT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -4958,15 +4958,15 @@ RectTransform:
   m_GameObject: {fileID: 1507017408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 50, y: 50, z: 1}
   m_Children: []
   m_Father: {fileID: 1436832992}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 420, y: 230.00003}
-  m_SizeDelta: {x: 10, y: 10}
+  m_AnchoredPosition: {x: 420, y: 230}
+  m_SizeDelta: {x: 4.752512, y: 2.6206055}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1507017410
 SpriteRenderer:
@@ -5007,7 +5007,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 48452eb0a382b4649b46a2883dd7840e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3d195752d745ab48b311bd42908d76c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6553,13 +6553,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917978502}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 1436832992}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 420.00006, y: -325}
@@ -6604,7 +6604,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 48452eb0a382b4649b46a2883dd7840e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b5b65bd1a2ce9d469936710f08d71cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6629,7 +6629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: 420, y: -335}
   itemName: Printer
-  itemId: 1
+  itemId: 0
 --- !u!1 &1939424224
 GameObject:
   m_ObjectHideFlags: 0
@@ -6781,7 +6781,7 @@ RectTransform:
   m_GameObject: {fileID: 1950288928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 7.5, y: 7.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1436832992}
   m_RootOrder: 2
@@ -6830,7 +6830,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 48452eb0a382b4649b46a2883dd7840e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8e017958b9442594e84b0a3963a79199, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6855,7 +6855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: {x: -420, y: 230}
   itemName: Printer
-  itemId: 0
+  itemId: 1
 --- !u!1 &1963775093
 GameObject:
   m_ObjectHideFlags: 0
@@ -7408,8 +7408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b9a6c3e4c9d634abcc45301995459d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previousValue: 1
-  selectedValue: 1
+  previousValue: 3
+  selectedValue: 3
   isUiEvent: 1
   thisDropdown: {fileID: 2146229980}
 --- !u!114 &2146229980
@@ -7458,16 +7458,16 @@ MonoBehaviour:
   m_Placeholder: {fileID: 0}
   m_ItemText: {fileID: 601986146}
   m_ItemImage: {fileID: 0}
-  m_Value: 1
+  m_Value: 3
   m_Options:
     m_Options:
-    - m_Text: Item 1
+    - m_Text: Desk
       m_Image: {fileID: 0}
-    - m_Text: Item 2
+    - m_Text: Box
       m_Image: {fileID: 0}
-    - m_Text: Item 3
+    - m_Text: Sticker printer
       m_Image: {fileID: 0}
-    - m_Text: Item 4
+    - m_Text: Desk with computer
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
