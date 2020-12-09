@@ -26,8 +26,15 @@ public class sprite_script : MonoBehaviour
 
     public void startTest()
     {
-        isTestRunning = true;
-        isWalking = true;
+        if (!isTestRunning)
+        {
+            isTestRunning = true;
+            isWalking = true;
+        }
+        else
+        {
+            print("A test is currently under way");
+        }
     }
 
     public void runTest()
@@ -40,12 +47,12 @@ public class sprite_script : MonoBehaviour
 
     void movement()
     {
-        if (MoveCheck == 4)
+        if (MoveCheck == 0)
         {
-            Vector2 posToMove = controller.GetComponent<game_ui>().gameObjects[3].GetComponent<item_script>().position;
-            moveToPos(posToMove);
-            faceTarget(posToMove);
+            Vector2 posToMove = new Vector2(700, 0);
+            transform.position = posToMove;
             checkIfAtPos(posToMove, 1);
+            isWalking = true;
         }
         else if (MoveCheck == 1)
         {
@@ -68,6 +75,20 @@ public class sprite_script : MonoBehaviour
             faceTarget(posToMove);
             checkIfAtPos(posToMove, 4);
         }
+        else if (MoveCheck == 4)
+        {
+            Vector2 posToMove = controller.GetComponent<game_ui>().gameObjects[3].GetComponent<item_script>().position;
+            moveToPos(posToMove);
+            faceTarget(posToMove);
+            checkIfAtPos(posToMove, 5);
+        }
+        else if (MoveCheck == 5)
+        {
+            Vector2 posToMove = new Vector2(-700.0f, -50.0f);
+            moveToPos(posToMove);
+            faceTarget(posToMove);
+            checkIfAtPos(posToMove, 6);
+        }
     }
 
     void moveToPos(Vector2 newPos)
@@ -82,6 +103,11 @@ public class sprite_script : MonoBehaviour
             isWalking = false;
             workStartTime = DateTime.Now;
             MoveCheck = newPosIndex;
+            if (MoveCheck == 6)
+            {
+                isTestRunning = false;
+                MoveCheck = 0;
+            }
         }
     }
 
