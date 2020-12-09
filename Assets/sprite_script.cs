@@ -26,11 +26,13 @@ public class sprite_script : MonoBehaviour
 
     public void startTest()
     {
-        if (isTestRunning != true){
+        if (!isTestRunning)
+        {
             isTestRunning = true;
             isWalking = true;
         }
-        else {
+        else
+        {
             print("A test is currently under way");
         }
     }
@@ -45,9 +47,9 @@ public class sprite_script : MonoBehaviour
 
     void movement()
     {
-        if (MoveCheck == 0) 
+        if (MoveCheck == 0)
         {
-            Vector2 posToMove = new Vector2(669.0f, -55.0f);
+            Vector2 posToMove = new Vector2(700, 0);
             transform.position = posToMove;
             checkIfAtPos(posToMove, 1);
             isWalking = true;
@@ -80,7 +82,7 @@ public class sprite_script : MonoBehaviour
             faceTarget(posToMove);
             checkIfAtPos(posToMove, 5);
         }
-        else if (MoveCheck == 5) 
+        else if (MoveCheck == 5)
         {
             Vector2 posToMove = new Vector2(-700.0f, -50.0f);
             moveToPos(posToMove);
