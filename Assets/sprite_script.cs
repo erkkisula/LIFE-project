@@ -10,6 +10,7 @@ public class sprite_script : MonoBehaviour
     public Boolean isTestRunning = false;
     public Boolean isWalking = false;
 
+    public Animator animator;
 
     DateTime workStartTime = new DateTime(1970, 1, 1);
     DateTime testStartTime = new DateTime(1970, 1, 1);
@@ -36,6 +37,7 @@ public class sprite_script : MonoBehaviour
         {
             isTestRunning = true;
             isWalking = true;
+            animator.SetBool("isWalking", true);
             testStartTime = DateTime.Now;
         }
         else
@@ -60,6 +62,7 @@ public class sprite_script : MonoBehaviour
             transform.position = posToMove;
             checkIfAtPos(posToMove, 1);
             isWalking = true;
+            animator.SetBool("isWalking", true);
         }
         else if (moveCheck == 1)
         {
@@ -108,6 +111,7 @@ public class sprite_script : MonoBehaviour
         if (Convert.ToInt32(transform.position.x) == posToCheck[0] && Convert.ToInt32(transform.position.y) == posToCheck[1])
         {
             isWalking = false;
+            animator.SetBool("isWalking", false);
             workStartTime = DateTime.Now;
             moveCheck = newPosIndex;
             if (moveCheck == 6)
@@ -128,6 +132,7 @@ public class sprite_script : MonoBehaviour
             if (span.TotalMilliseconds > 3000.0)
             {
                 isWalking = true;
+                animator.SetBool("isWalking", true);
             }
         }
     }
