@@ -177,7 +177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Item 4
+  m_text: Box
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -781,8 +781,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b9a6c3e4c9d634abcc45301995459d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previousValue: 0
-  selectedValue: 0
+  previousValue: 1
+  selectedValue: 1
   isUiEvent: 1
   thisDropdown: {fileID: 104903724}
 --- !u!114 &104903724
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_Placeholder: {fileID: 0}
   m_ItemText: {fileID: 329993606}
   m_ItemImage: {fileID: 0}
-  m_Value: 0
+  m_Value: 1
   m_Options:
     m_Options:
     - m_Text: Desk
@@ -1398,7 +1398,7 @@ MonoBehaviour:
   m_Placeholder: {fileID: 0}
   m_ItemText: {fileID: 283979731}
   m_ItemImage: {fileID: 0}
-  m_Value: 1
+  m_Value: 0
   m_Options:
     m_Options:
     - m_Text: Desk
@@ -1473,8 +1473,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b9a6c3e4c9d634abcc45301995459d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previousValue: 1
-  selectedValue: 1
+  previousValue: 0
+  selectedValue: 0
   isUiEvent: 1
   thisDropdown: {fileID: 232912277}
 --- !u!1 &267290739
@@ -5646,7 +5646,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Item 3
+  m_text: Sticker printer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6451,7 +6451,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Item 2
+  m_text: Desk with computer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8431,7 +8431,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 420.00006, y: -325}
+  m_AnchoredPosition: {x: -420, y: 230}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1917978504
@@ -8496,7 +8496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 173a7341999ff5a4a83c6568d53214e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {x: 420, y: -335}
+  position: {x: -420, y: 230}
   itemName: Printer
   itemId: 0
 --- !u!1 &1939424224
@@ -8657,7 +8657,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -420, y: 230.00003}
+  m_AnchoredPosition: {x: 420, y: -325}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1950288930
@@ -8722,7 +8722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 173a7341999ff5a4a83c6568d53214e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {x: -420, y: 230}
+  position: {x: 420, y: -325}
   itemName: Printer
   itemId: 1
 --- !u!1 &1963775093
@@ -8855,7 +8855,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Item 1
+  m_text: Desk
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
