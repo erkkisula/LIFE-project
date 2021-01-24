@@ -6,12 +6,19 @@ using System;
 public class sprite_script : MonoBehaviour
 {
     private GameObject controller;
-    public int MoveCheck = 1;
+    public int moveCheck = 1;
     public Boolean isTestRunning = false;
     public Boolean isWalking = false;
 
+    public Animator animator;
 
     DateTime workStartTime = new DateTime(1970, 1, 1);
+    DateTime testStartTime = new DateTime(1970, 1, 1);
+    DateTime testEndTime = new DateTime(1970, 1, 1);
+
+    public GameObject finishScreen;
+
+    public GameObject failScreen;
 
     void Start()
     {
@@ -30,6 +37,8 @@ public class sprite_script : MonoBehaviour
         {
             isTestRunning = true;
             isWalking = true;
+            animator.SetBool("isWalking", true);
+            testStartTime = DateTime.Now;
         }
         else
         {
@@ -47,42 +56,43 @@ public class sprite_script : MonoBehaviour
 
     void movement()
     {
-        if (MoveCheck == 0)
+        if (moveCheck == 0)
         {
             Vector2 posToMove = new Vector2(700, 0);
             transform.position = posToMove;
             checkIfAtPos(posToMove, 1);
             isWalking = true;
+            animator.SetBool("isWalking", true);
         }
-        else if (MoveCheck == 1)
+        else if (moveCheck == 1)
         {
             Vector2 posToMove = controller.GetComponent<game_ui>().gameObjects[0].GetComponent<item_script>().position;
             moveToPos(posToMove);
             faceTarget(posToMove);
             checkIfAtPos(posToMove, 2);
         }
-        else if (MoveCheck == 2)
+        else if (moveCheck == 2)
         {
             Vector2 posToMove = controller.GetComponent<game_ui>().gameObjects[1].GetComponent<item_script>().position;
             moveToPos(posToMove);
             faceTarget(posToMove);
             checkIfAtPos(posToMove, 3);
         }
-        else if (MoveCheck == 3)
+        else if (moveCheck == 3)
         {
             Vector2 posToMove = controller.GetComponent<game_ui>().gameObjects[2].GetComponent<item_script>().position;
             moveToPos(posToMove);
             faceTarget(posToMove);
             checkIfAtPos(posToMove, 4);
         }
-        else if (MoveCheck == 4)
+        else if (moveCheck == 4)
         {
             Vector2 posToMove = controller.GetComponent<game_ui>().gameObjects[3].GetComponent<item_script>().position;
             moveToPos(posToMove);
             faceTarget(posToMove);
             checkIfAtPos(posToMove, 5);
         }
-        else if (MoveCheck == 5)
+        else if (moveCheck == 5)
         {
             Vector2 posToMove = new Vector2(-700.0f, -50.0f);
             moveToPos(posToMove);
@@ -101,12 +111,15 @@ public class sprite_script : MonoBehaviour
         if (Convert.ToInt32(transform.position.x) == posToCheck[0] && Convert.ToInt32(transform.position.y) == posToCheck[1])
         {
             isWalking = false;
+            animator.SetBool("isWalking", false);
             workStartTime = DateTime.Now;
-            MoveCheck = newPosIndex;
-            if (MoveCheck == 6)
+            moveCheck = newPosIndex;
+            if (moveCheck == 6)
             {
                 isTestRunning = false;
-                MoveCheck = 0;
+                moveCheck = 0;
+                testEndTime = DateTime.Now;
+                checkResult();
             }
         }
     }
@@ -119,6 +132,7 @@ public class sprite_script : MonoBehaviour
             if (span.TotalMilliseconds > 3000.0)
             {
                 isWalking = true;
+                animator.SetBool("isWalking", true);
             }
         }
     }
@@ -128,5 +142,19 @@ public class sprite_script : MonoBehaviour
         Vector2 dir = new Vector2(targetDir.x - transform.position.x, targetDir.y - transform.position.y);
         var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 90;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    }
+
+    void checkResult()
+    {
+        TimeSpan span = testEndTime - testStartTime;
+        print(span.TotalMilliseconds);
+        if (span.TotalMilliseconds < 22500.0)
+        {
+            finishScreen.SetActive(true);
+        }
+        else
+        {
+            failScreen.SetActive(true);
+        }
     }
 }
